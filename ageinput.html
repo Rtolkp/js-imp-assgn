@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dob</title>
+</head>
+<body>
+	<form>
+	<input type="date" id="dob">
+	<input type="button" onclick="age()" value="calculate">
+	<p id="demo"></p>
+	</form>
+
+</body>
+<script >
+	function age(){
+		var input=document.getElementById("dob").value;
+		var userdate=new Date(input);
+		var current=new Date();
+		var y=userdate.getFullYear();
+		var yy=current.getFullYear();
+		var age=yy-y;
+		document.getElementById('demo').innerHTML=age;
+	}
+	
+</script>
+</html>
